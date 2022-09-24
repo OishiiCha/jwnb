@@ -51,12 +51,12 @@ class MyWebBrowser(QMainWindow):
         self.btn3.setFont(QFont(ftype,fsize))
         self.btn3.setStyleSheet(buttoncol)
         
-        self.back_btn = QPushButton("🢀")
+        self.back_btn = QPushButton("←")
         self.back_btn.setMinimumHeight(150)
         self.back_btn.setFont(QFont(ftype,fsize))
         self.back_btn.setStyleSheet(buttoncol)
         
-        self.forward_btn = QPushButton("🢂")
+        self.forward_btn = QPushButton("→")
         self.forward_btn.setMinimumHeight(150)
         self.forward_btn.setFont(QFont(ftype,fsize))
         self.forward_btn.setStyleSheet(buttoncol)
