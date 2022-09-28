@@ -22,7 +22,7 @@ def file_info(num):
     d2 = st.find('|',d1+1)
     return st[d1+1:d2]
 
-#homepage = html_file # file_info(0)
+homepage = file_info(0)
 jwnews = file_info(1)
 congnum = file_info(2)
 cong1 = file_info(3).upper()
@@ -92,10 +92,11 @@ class MyWebBrowser(QMainWindow):
         self.horizontal.addWidget(self.back_btn)
         self.horizontal.addWidget(self.forward_btn)
         
+        
         self.browser = QWebEngineView()
         
         
-        self.home_btn.clicked.connect(lambda: self.loadPage())
+        self.home_btn.clicked.connect(lambda: self.navigate(homepage))
         self.btn3.clicked.connect(lambda: self.navigate(jwnews))
         self.cong1.clicked.connect(lambda: self.navigate(cong1url))
         if int(congnum) > 1:
@@ -108,7 +109,7 @@ class MyWebBrowser(QMainWindow):
         self.layout.addLayout(self.horizontal)
         self.layout.addWidget(self.browser)
         
-        self.loadPage()
+        self.navigate(homepage)
         
         self.window.setLayout(self.layout)
         self.window.show()
@@ -126,3 +127,4 @@ window = MyWebBrowser()
 app.exec_()
 
         
+
