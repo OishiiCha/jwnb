@@ -1,10 +1,12 @@
 import tkinter as tk
 from tkinter import *
 
-root=Tk("JWNB Editor")
+root=Tk()
+root.title('JWNB Editor')
 root.config(bg='grey12')
 root.geometry('1000x400')
 root.resizable(width=False, height=False)
+root.iconbitmap('jwnb_e_logo.ico')
 
 f = open('data.jwnb')
 f1 = f.read()
