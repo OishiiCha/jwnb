@@ -73,11 +73,6 @@ class MyWebBrowser(QMainWindow):
         self.btn3.setFont(QFont(ftype,fsize))
         self.btn3.setStyleSheet(buttoncol)
         
-        self.wol = QPushButton("WOL")
-        self.wol.setMinimumHeight(150)
-        self.wol.setFont(QFont(ftype,fsize))
-        self.wol.setStyleSheet(buttoncol)
-        
         self.back_btn = QPushButton("←")
         self.back_btn.setMinimumHeight(150)
         self.back_btn.setFont(QFont(ftype,fsize2))
@@ -90,7 +85,6 @@ class MyWebBrowser(QMainWindow):
         
         self.horizontal.addWidget(self.home_btn)
         self.horizontal.addWidget(self.btn3)
-        self.horizontal.addWidget(self.wol)
         self.horizontal.addWidget(self.cong1)
         if int(congnum) > 1:
             self.horizontal.addWidget(self.cong2)
@@ -105,7 +99,6 @@ class MyWebBrowser(QMainWindow):
         
         self.home_btn.clicked.connect(lambda: self.navigate(homepage))
         self.btn3.clicked.connect(lambda: self.navigate(jwnews))
-        self.wol.clicked.connect(lambda: self.navigate('https://wol.jw.org'))
         self.cong1.clicked.connect(lambda: self.navigate(cong1url))
         if int(congnum) > 1:
             self.cong2.clicked.connect(lambda: self.navigate(cong2url))
